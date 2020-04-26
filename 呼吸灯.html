@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>呼吸灯</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        article{
+            width: 230px;
+            height: 330px;
+            background: #343434;
+            margin: 50px auto;
+        }
+        .circle{
+            height: 230px;
+            padding: 35px;
+        }
+        .circle .outer{
+            height: 100%;
+            border: 5px solid #9a9a9a;
+            border-radius: 50%;
+            padding: 10px;
+            animation-name: outer;
+            animation-duration: 4.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .circle .inner{
+            height: 100%;
+            border: 10px solid #ffffff;  
+            border-radius: 50%;
+            animation-name: inner;
+            animation-duration: 4.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;     
+        }
+        .text{
+            color: #ffffff;
+            text-align: center;
+            height: 100px;
+        }
+        @keyframes outer{
+            20%{
+            transform: scale(1.125);
+            }
+            40%{
+            transform: scale(1);
+            }
+            100%{
+            transform: scale(1);
+            }
+        }
+        @keyframes inner{
+            20%{
+            transform: scale(0.875);
+            }
+            40%{
+            transform: scale(1);
+            }
+            65%{
+            transform: scale(0.82857143);
+            }
+            100%{
+            transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div class="circle">
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="text">
+            呼吸灯!
+        </div>
+    </article>
+</body>
+</html>
